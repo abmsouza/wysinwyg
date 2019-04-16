@@ -288,7 +288,7 @@ i.fa-angle-down {
 /*	border: 1px solid blue;*/
 	padding: 40px;
 	margin-left: 100px;
-	grid-column: 2 / 4;
+	grid-column: 1 / 4;
 	grid-row: 2 / 5;
 	border: 2px solid #7b6438;
 	border-top-left-radius: 60px;
@@ -314,8 +314,6 @@ i.fa-angle-down {
 	overflow: hidden;
 }
 
-
-
 .wrapper3-video {
 	padding: 40px;
 	margin: -40px;
@@ -330,6 +328,27 @@ i.fa-angle-down {
 	display: flex;
 	overflow: hidden;
 	align-items: center;
+	object-fit: cover;
+    object-position: 50% 100%;
+}
+
+@media screen and (max-width: 1000px) {
+	.text-w3 {
+		grid-column: 1 / 6;
+		grid-row: 1 / 6;
+	}
+
+	.wrapper3-video {
+		display: none;
+	}
+
+	.text-w3 {
+		font-size: 3vmax;
+	}
+	
+	.text-w3 .emphasis {
+		font-size: 6vmax;
+	}
 }
 
 .text-w3-video {
@@ -348,7 +367,6 @@ i.fa-angle-down {
 .fig-w3-video {
 	z-index: 2;
 	padding: 20px;
-	object-fit: cover;
 }
 
 .fig-w3-video a {
@@ -356,6 +374,13 @@ i.fa-angle-down {
 	opacity: .5;
 	filter: grayscale(.3);
 }
+
+/*
+.fig-w3-video img {
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+*/
 
 .wrapper3 .fa-angle-down {
 	grid-column: 1;
@@ -439,6 +464,8 @@ i.fa-angle-down {
 	padding: 80px;
 	overflow: hidden;
 	z-index: 5;
+	border-bottom: 2px solid;
+	border-bottom-color: #342b3d;
 }
 
 .paragraph-w-6 {
@@ -562,3 +589,130 @@ i.fa-angle-down {
 	font-size: 2vmax;
 	text-transform: capitalize;
 }
+
+/*DISINFORMATION WARS PAGE*/
+
+#s1 {
+	height: 100vh;
+	background: url("../images/obamadistorted.gif") fixed center center no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#s1 hgroup {
+	background-color: rgba(52, 43, 61, .5);
+	text-align: center;
+	margin: 50px;
+	padding: 40px;
+	border-radius: 20px;
+	border-top-left-radius: 0;
+	border: 1px solid #7b6438;
+	overflow: hidden;
+}
+
+#s1 hgroup h1 {
+	font-family: 'BenchNine', sans-serif;
+	font-size: 5vmax;
+	line-height: 5.5vmax;
+	color: #f7e7f1;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+	padding-bottom: 4px;
+	overflow: hidden;
+}
+
+/*
+#s1 hgroup h2 {
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 1.5vmax;
+	color: #fff;
+	text-transform: capitalize;
+	margin-top: 10px;
+}
+*/
+
+#s2 {
+	background-color: #0e0d0f;
+	padding: 100px;
+	display: flex;
+	min-width: 60%;
+	justify-content: center;
+	align-items: center;
+}
+
+#s2 article {
+	column-count: 2;
+	column-gap: 80px;
+	font-family: 'EB Garamond', serif;
+	color: #7b6438;
+	font-weight: 400;
+	font-size: 2vmax;
+	text-align: justify;
+}
+
+#s2 .emphasis {
+	color: #8c1f2b;
+	font-family: 'EB Garamond', serif;
+	font-weight: 500;
+	font-style: italic;
+	text-align: justify;
+	font-size: 2.4vmax;
+	overflow: hidden;
+}
+
+#s3 {
+	background-color: #342b3d;
+	background: url("../images/crowd.jpg") fixed center center no-repeat;
+	background-size: cover;
+	display: block;
+	padding: 60px;
+}
+
+#s3 h2 {
+	background-color: rgba(123, 100, 56, .9);
+	border-radius: 30px 30px 0 30px;
+	margin-left: 55%;
+	width: 40%;
+	padding: 40px;
+	font-family: 'EB Garamond', serif;
+	font-weight: 500;
+	font-size: 3vmax;
+	color: #342b3d;
+	text-transform: capitalize;
+}
+
+#s4 {
+	background-color: #0e0d0f;
+	background-size: cover;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 60px;
+}
+
+#s4 p {
+	background-color: rgba(52, 43, 61, .8);
+	border-radius: 10px;
+	width: 40%;
+	padding: 60px;
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-size: 2vmax;
+	color: #7b6438;
+}
+
+#s4 .emphasis {
+	color: #f7e7f1;
+	opacity: .6;
+	font-family: 'EB Garamond', serif;
+	font-weight: 500;
+	font-style: italic;
+	text-align: justify;
+	font-size: 3.2vmax;
+	overflow: hidden;
+}
+
