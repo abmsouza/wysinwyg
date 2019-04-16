@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		
+		<title>deepfakes quiz</title>
+		
+		<script>
+			function selectedAnswer(question_number, answered_real) {
+				var expected_real = question_number == 1 || question_number == 3;
+				document.getElementById('bt-real-' + question_number).style.display = 'none';
+				document.getElementById('bt-fake-' + question_number).style.display = 'none';
+				var text = '';
+				if (expected_real == answered_real) {
+					text = text + 'CORRECT ';
+				} else {
+					text = text + 'WRONG ';
+				}
+				if (expected_real) {
+					text = text + ' this person is real';
+				} else {
+					text = text + ' this person is not real';
+				}
+				var ans = document.getElementById('answer-' + question_number);
+				ans.innerHTML = text;
+				ans.style.display = 'block';
+			}
+		</script>
+	</head>
+
+	<body class="black-background">
+	<section class="header-container">
+	  <div class="dropdown">
+		<span class="menu-icon">&#9776;</span>
+		<div class="dropdown-content">
+			<a class="dropdown-item" href="index.html">home</a>
+			<a class="dropdown-item" href="">disinformation war</a>
+			<a class="dropdown-item" href="quiz.html">test your skills</a>
+			<a class="dropdown-item" href="">learn more</a>
+		</div>
+	  </div>
+	</section>
+
+		<section class="wrapper-quiz1">
+			<hgroup class="title-quiz">
+				<h2>Can you tell the fake from the real?</h2>
+			</hgroup>
+			
+			<section class="wrapper-quiz-images">
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/real3.jpg" alt="face"> 
+					<div class="question-container">
+						<div id="bt-real-1" class="quiz-button button-real" onclick="selectedAnswer(1, true)">real</div>
+						<div id="bt-fake-1" class="quiz-button button-fake" onclick="selectedAnswer(1, false)">fake</div>
+						<div id="answer-1" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/fake6.png" alt="face">
+					<div class="question-container">
+						<div id="bt-real-2" class="quiz-button button-real" onclick="selectedAnswer(2, true)">real</div>
+						<div id="bt-fake-2" class="quiz-button button-fake" onclick="selectedAnswer(2, false)">fake</div>
+						<div id="answer-2" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/real2.jpg" alt="face">
+					<div class="question-container">
+						<div id="bt-real-3" class="quiz-button button-real" onclick="selectedAnswer(3, true)">real</div>
+						<div id="bt-fake-3" class="quiz-button button-fake" onclick="selectedAnswer(3, false)">fake</div>
+						<div id="answer-3" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/fake1.png" alt="face">
+					<div class="question-container">
+						<div id="bt-real-4" class="quiz-button button-real" onclick="selectedAnswer(4, true)">real</div>
+						<div id="bt-fake-4" class="quiz-button button-fake" onclick="selectedAnswer(4, false)">fake</div>
+						<div id="answer-4" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/fake4.png" alt="face">
+					<div class="question-container">
+						<div id="bt-real-5" class="quiz-button button-real" onclick="selectedAnswer(5, true)">real</div>
+						<div id="bt-fake-5" class="quiz-button button-fake" onclick="selectedAnswer(5, false)">fake</div>
+						<div id="answer-5" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			  <div class="quiz-question">
+				<div class="quiz-container">
+					<img class="quiz-image" src="imagesquiz/fake2.png" alt="face">
+					<div class="question-container">
+						<div id="bt-real-6" class="quiz-button button-real" onclick="selectedAnswer(6, true)">real</div>
+						<div id="bt-fake-6" class="quiz-button button-fake" onclick="selectedAnswer(6, false)">fake</div>
+						<div id="answer-6" class="quiz-answer" hidden></div>
+					</div>
+				</div>
+			  </div>
+			</section>
+		</section>
+	</body>
+</html>
